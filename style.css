@@ -18,29 +18,35 @@ nav {
   position: fixed;
   width: 100vw;
   height: var(--nav-height);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
   background-color: rgba(26, 25, 88, 0.911);
-  padding: 0 4rem;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  transform: scaleY(1);
+  list-style: none;
   color: rgb(248, 246, 246);
-  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  transition: transform 300ms;
+  transform-origin: top;
 }
 
 nav li {
-  text-decoration: none;
   font-size: 1.2rem;
 }
 
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+
 .hamburger {
+  cursor: pointer;
+  position: absolute;
+  right: 50px;
+  top: 14px;
+  display: none;
 }
 .hb-line {
   background-color: white;
@@ -79,7 +85,6 @@ nav li {
   text-align: center;
   margin-bottom: 0.5rem;
 }
-
 #welcome-section h3 {
   width: 60vw;
   text-align: center;
@@ -93,4 +98,34 @@ nav li {
 
 #projects {
   height: 150vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    background-color: rgba(26, 25, 88, 0.911);
+    width: 100%;
+    margin-top: var(--nav-height);
+  }
+  nav li {
+    margin-bottom: 1rem;
+  }
+
+  nav li a {
+    transition: color 250ms;
+  }
+
+  nav li a:hover {
+    color: rgb(91, 223, 216);
+  }
+}
+
+.display-none {
+  transform: scaleY(0);
+}
+.display-flex {
+  transform: scaleY(1);
 }
