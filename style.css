@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+
+  --nav-height: 3rem;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  width: 100vw;
+  height: var(--nav-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba(26, 25, 88, 0.911);
+  padding: 0 4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgb(248, 246, 246);
+  gap: 3rem;
+}
+
+nav li {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.hamburger {
+}
+.hb-line {
+  background-color: white;
+  height: 3px;
+  margin-bottom: 5px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+
+#welcome-section {
+  height: 100vh;
+  padding-top: var(--nav-height);
+  /* background: linear-gradient(
+    to top right,
+    rgb(149, 171, 233),
+    rgb(128, 156, 235),
+    rgb(68, 130, 167)
+  ); */
+  background: linear-gradient(
+    to top right,
+    rgba(44, 44, 44, 0.932),
+    rgba(31, 31, 31, 0.938)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcome-section h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+#welcome-section h3 {
+  width: 60vw;
+  text-align: center;
+  line-height: 1.4;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: rgb(145, 138, 245);
+}
+
+/* Work Section */
+
+#projects {
+  height: 150vh;
+}
