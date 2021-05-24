@@ -13,8 +13,9 @@
   --nav-height: 3rem;
 }
 
-/* Navigation */
-
+/* 
+****** Navigation ******
+*/
 nav {
   position: fixed;
 }
@@ -80,8 +81,9 @@ nav {
   transform: scaleY(0);
 }
 
-/* Hero Section */
-
+/* 
+****** Hero Section ******
+*/
 #welcome-section {
   height: 100vh;
   padding-top: var(--nav-height);
@@ -118,8 +120,9 @@ nav {
   color: rgb(145, 138, 245);
 }
 
-/* Work Section */
-
+/* 
+****** Work Section ******
+*/
 #projects {
-  height: 150vh;
+  background: linear-gradient(to right bottom, rgb(47, 31, 105));
 }
