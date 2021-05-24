@@ -9,6 +9,7 @@
 :root {
   font-size: 16px;
   font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
 
   --nav-height: 3rem;
 }
@@ -142,12 +143,18 @@ nav {
 .project-tiles-wrapper {
   padding: 3rem 0;
   display: grid;
-  grid-template-columns: 1fr minmax(400px, 3fr) 1fr;
+  grid-template-columns: 1fr minmax(280px, 3fr) 1fr;
   row-gap: 1.5rem;
 }
 
-.project-tile {
+.left-tile {
   grid-column: 2 / span 1;
+}
+.right-tile {
+  grid-column: 2 / span 1;
+}
+
+.project-tile {
   padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.726);
   border-radius: 0.5rem;
@@ -238,4 +245,21 @@ nav {
   text-decoration: none;
   color: rgb(10, 48, 99);
   transition: color 250ms;
+}
+
+/* 
+****** Media Queries ******
+*/
+
+@media only screen and (min-width: 800px) {
+  .project-tiles-wrapper {
+    grid-template-columns: 1fr minmax(300px, 2fr) minmax(300px, 2fr) 1fr;
+    column-gap: 2rem;
+  }
+  .left-tile {
+    grid-column: 2 / span 1;
+  }
+  .right-tile {
+    grid-column: 3 / span 1;
+  }
 }
